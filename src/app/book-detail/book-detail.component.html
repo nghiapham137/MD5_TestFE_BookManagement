@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 style="text-align: center;">Book Detail</h2>
+    <button type="button" [routerLink]="['']" class="btn btn-secondary">Back</button>
+    <form>
+        <label for="title" style="font-weight: bold;">Title</label>
+        <p id="title">{{currentBook.title}}</p>
+        <label for="author" style="font-weight: bold;">Author</label>
+        <p id="author">{{currentBook.author}}</p>
+        <label for="description" style="font-weight: bold; align-items: center;">Description</label>
+        <textarea id="description" cols="50" rows="5">{{currentBook.description}}</textarea>
+    </form>
+    
+
+</div>

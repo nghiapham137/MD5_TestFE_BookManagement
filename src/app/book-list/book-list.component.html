@@ -1,0 +1,26 @@
+<div class="container">
+    <h2 style="text-align: center;">Book List</h2>
+    <div>
+    <h4 style="float: left;">Book Quantity: <span>{{books.length}}</span></h4>
+    <button [routerLink]="['/book/create']" class="btn btn-primary" style="float: right;">Create User</button>
+    </div>
+    
+    <table class="table">
+        <tr class="table-dark">
+            <td>No</td>
+            <td>Book Name</td>
+            <td>Author</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr *ngFor="let book of books, let i=index">
+            <td>{{i+1}}</td>
+            <td><a [routerLink]="['/book', book.id]">{{book.title}}</a></td>
+            <td>{{book.author}}</td>
+            <td><button [routerLink]="['/book/update', book.id]" class="btn-warning">Edit</button></td>
+            <td><button [routerLink]="['/book/delete', book.id]" class="btn-danger">Delete</button></td>
+        </tr>
+        
+    </table>
+    <p>Copy right by <span style="color: red;">Nghia Pham Anh</span></p>
+</div>

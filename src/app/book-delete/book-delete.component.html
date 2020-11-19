@@ -1,0 +1,6 @@
+<div class="container">
+    <h2>Do you wan to delete book: </h2>
+    <p><span>{{currentBook.title}}</span> of author: <span>{{currentBook.author}}</span></p>
+    <button  (click)="deleteBook()" class="btn btn-danger">Delete</button>
+    <button type="button" [routerLink]="['']" class="btn btn-secondary">Back</button>
+</div>
